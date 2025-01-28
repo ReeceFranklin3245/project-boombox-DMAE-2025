@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://co46jm4pqb0ny"]
+
+[ext_resource type="Script" path="res://src/main.gd" id="1_xcde2"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_xcde2")
+DEBUG = true
+startState = "res://scenes/room.tscn"
