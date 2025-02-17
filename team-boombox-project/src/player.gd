@@ -7,13 +7,13 @@ enum {NONE, PLATFORM, MENU}
 @export var airACCEL = 5
 @export var DECEL = 20
 @export var MAXSPEED = 100
-@export var airSPEED = 75
+@export var airSPEED = 150
 var movement_dir:Vector2
 var prev_dir
 
-@export var JUMP = 100
+@export var JUMP = 280
 @export var FALLSPEED = 150
-@export var GRAVITY = 100
+@export var GRAVITY = 20
 var jumpBuffer = false
 var was_on_floor = false
 
@@ -49,6 +49,11 @@ func handleMovement(delta):
 		if prev_dir != 0 && prev_dir == -direction:
 			accel = airACCEL
 		maxSpeed = airSPEED
+		velocity.y += GRAVITY
+		if velocity.y > maxSpeed:
+			velocity.y = maxSpeed
+	else:
+		$JumpTimer.stop()
 		
 	
 	if direction != 0:
@@ -56,10 +61,6 @@ func handleMovement(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, DECEL)
 	
-	if !is_on_floor():
-		velocity.y = move_toward(velocity.y, FALLSPEED, GRAVITY * delta)
-	else:
-		$JumpTimer.stop()
 	
 	if Input.is_action_just_pressed("Action1"):
 		$JumpTimer.start()

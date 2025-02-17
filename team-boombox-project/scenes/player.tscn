@@ -39,7 +39,7 @@ position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_yq2fn")
 
 [node name="JumpTimer" type="Timer" parent="."]
-wait_time = 0.15
+wait_time = 0.1
 one_shot = true
 
 [node name="jumpBufferTimer" type="Timer" parent="."]
