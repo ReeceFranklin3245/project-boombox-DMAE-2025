@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://co46jm4pqb0ny"]
+[gd_scene load_steps=6 format=3 uid="uid://co46jm4pqb0ny"]
 
 [ext_resource type="Script" path="res://src/main.gd" id="1_xcde2"]
+[ext_resource type="Texture2D" uid="uid://cnyd1lh0d20f1" path="res://assets/pal.png" id="2_1qfsj"]
+[ext_resource type="Texture2D" uid="uid://siakiiku6kmj" path="res://assets/palr.png" id="3_pdnjg"]
+[ext_resource type="Texture2D" uid="uid://dminjlfitgn3w" path="res://assets/palrb.png" id="4_e1to8"]
+[ext_resource type="Texture2D" uid="uid://ycbgb6h1k1g8" path="res://assets/palrbg.png" id="5_7wr8o"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_xcde2")
+pal_ = ExtResource("2_1qfsj")
+pal_r = ExtResource("3_pdnjg")
+pal_rb = ExtResource("4_e1to8")
+pal_rbg = ExtResource("5_7wr8o")
 DEBUG = true
 startState = "res://scenes/room.tscn"
