@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtnlbfe2d0v7c"]
+
+[ext_resource type="Script" path="res://src/gear.gd" id="1_8xeby"]
+[ext_resource type="Texture2D" uid="uid://clarjpwder2y6" path="res://assets/gearGreen.png" id="2_xfufk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsdq0"]
+size = Vector2(16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uvoqu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xfufk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Gear" type="Node2D"]
+script = ExtResource("1_8xeby")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_nsdq0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uvoqu")
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=4 uid="uid://bstnx6u5xnxv2"]
+
+[ext_resource type="Material" uid="uid://nhde4wf0sxoy" path="res://assets/lvlShader.tres" id="1_6pt86"]
+[ext_resource type="Texture2D" uid="uid://3wj3aju73tw5" path="res://assets/TrashBackGround.png" id="1_wfmmb"]
+[ext_resource type="Texture2D" uid="uid://q763atgtpoa3" path="res://assets/testtile.png" id="2_cku7d"]
+[ext_resource type="PackedScene" uid="uid://cvs5thrxbok4y" path="res://scenes/load_zone.tscn" id="3_jsr1u"]
+[ext_resource type="PackedScene" uid="uid://uccrqqp5fi0o" path="res://scenes/Rooms/Room1-2.tscn" id="4_yy0fk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yuqek"]
+texture = ExtResource("2_cku7d")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_euvj4"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_yuqek")
+
+[node name="StartRoom" type="Node2D"]
+use_parent_material = true
+
+[node name="TrashBackGround" type="Sprite2D" parent="."]
+material = ExtResource("1_6pt86")
+position = Vector2(394, -157.813)
+scale = Vector2(0.2719, 0.381134)
+texture = ExtResource("1_wfmmb")
+
+[node name="Col" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2(96, -51)
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="Col"]
+material = ExtResource("1_6pt86")
+position = Vector2(0, 3)
+tile_map_data = PackedByteArray("AADx//7/AAAAAAAAAADx////AAAAAAAAAADy////AAAAAAAAAAD4//7/AAAAAAAAAAD4////AAAAAAAAAAD5//7/AAAAAAAAAAD5////AAAAAAAAAAD6//7/AAAAAAAAAAD6////AAAAAAAAAAD7//7/AAAAAAAAAAD7////AAAAAAAAAAD8//7/AAAAAAAAAAD8////AAAAAAAAAAD9//7/AAAAAAAAAAD9////AAAAAAAAAAD+//7/AAAAAAAAAAD+////AAAAAAAAAAAAAP//AAAAAAAAAAADAP7/AAAAAAAAAAADAP//AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP//AAAAAAAAAAAFAP7/AAAAAAAAAAAFAP//AAAAAAAAAADu//7/AAAAAAAAAADu////AAAAAAAAAADu/wAAAAAAAAAAAADu/wEAAAAAAAAAAADu/wIAAAAAAAAAAADv//7/AAAAAAAAAADv////AAAAAAAAAADv/wAAAAAAAAAAAADv/wEAAAAAAAAAAADv/wIAAAAAAAAAAADw/wIAAAAAAAAAAADx/wAAAAAAAAAAAADx/wIAAAAAAAAAAADy/wAAAAAAAAAAAADy/wIAAAAAAAAAAADz/wAAAAAAAAAAAADz/wIAAAAAAAAAAAD0/wAAAAAAAAAAAAD0/wIAAAAAAAAAAAD1/wIAAAAAAAAAAAD2/wIAAAAAAAAAAAD3/wIAAAAAAAAAAAD4/wIAAAAAAAAAAAD5/wIAAAAAAAAAAAD6/wIAAAAAAAAAAAD7/wIAAAAAAAAAAAD8/wAAAAAAAAAAAAD8/wIAAAAAAAAAAAD9/wAAAAAAAAAAAAD9/wIAAAAAAAAAAAD+/wAAAAAAAAAAAAD+/wIAAAAAAAAAAAD//wIAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAADv//3/AAAAAAAAAADu//3/AAAAAAAAAADu//z/AAAAAAAAAADv//z/AAAAAAAAAADz////AAAAAAAAAAD1/wAAAAAAAAAAAADy//7/AAAAAAAAAAD6//3/AAAAAAAAAAD7//3/AAAAAAAAAAD7//z/AAAAAAAAAAD6//z/AAAAAAAAAAADAP3/AAAAAAAAAAADAPz/AAAAAAAAAAADAPv/AAAAAAAAAAAEAPv/AAAAAAAAAAAFAPv/AAAAAAAAAAAFAPz/AAAAAAAAAAAEAPz/AAAAAAAAAAAEAP3/AAAAAAAAAAAFAP3/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAADu//v/AAAAAAAAAADv//v/AAAAAAAAAADw//7/AAAAAAAAAADw////AAAAAAAAAADw/wAAAAAAAAAAAADw/wEAAAAAAAAAAADx/wEAAAAAAAAAAADy/wEAAAAAAAAAAADz/wEAAAAAAAAAAAD0/wEAAAAAAAAAAAD1/wEAAAAAAAAAAAD2/wEAAAAAAAAAAAD3/wEAAAAAAAAAAAD4/wAAAAAAAAAAAAD5/wAAAAAAAAAAAAD6/wAAAAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAD8/wEAAAAAAAAAAAD6/wEAAAAAAAAAAAD5/wEAAAAAAAAAAAD4/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAAAAAAAAAAAAAACAP//AAAAAAAAAAACAP7/AAAAAAAAAAD///v/AAAAAAAAAAD+//v/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD/////AAAAAAAAAAD///7/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_euvj4")
+
+[node name="LoadZone" parent="Col" instance=ExtResource("3_jsr1u")]
+Room = ExtResource("4_yy0fk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -111)
+zoom = Vector2(3, 3)
+
+[node name="NewPlayerPos" type="Marker2D" parent="."]
+position = Vector2(-185, -145)

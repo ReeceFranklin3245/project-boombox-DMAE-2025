@@ -1,0 +1,35 @@
+[gd_scene load_steps=10 format=3 uid="uid://bvvwhl0wkrmit"]
+
+[ext_resource type="Material" uid="uid://nhde4wf0sxoy" path="res://assets/lvlShader.tres" id="1_st3g3"]
+[ext_resource type="Script" path="res://src/game.gd" id="2_xgu2i"]
+[ext_resource type="Texture2D" uid="uid://cnyd1lh0d20f1" path="res://assets/pal.png" id="3_oms6j"]
+[ext_resource type="Texture2D" uid="uid://siakiiku6kmj" path="res://assets/palr.png" id="4_yih6j"]
+[ext_resource type="Texture2D" uid="uid://dminjlfitgn3w" path="res://assets/palrb.png" id="5_qae73"]
+[ext_resource type="Texture2D" uid="uid://ycbgb6h1k1g8" path="res://assets/palrbg.png" id="6_7onfg"]
+[ext_resource type="PackedScene" uid="uid://bstnx6u5xnxv2" path="res://scenes/Rooms/StartRoom.tscn" id="8_nx52g"]
+[ext_resource type="PackedScene" uid="uid://byclep056nn7m" path="res://scenes/player.tscn" id="9_2xsb4"]
+[ext_resource type="AudioStream" uid="uid://bodvx63m2ji1y" path="res://assets/music/SynchAudio.tres" id="11_a8d3h"]
+
+[node name="Game" type="Node2D"]
+material = ExtResource("1_st3g3")
+script = ExtResource("2_xgu2i")
+pal_ = ExtResource("3_oms6j")
+pal_r = ExtResource("4_yih6j")
+pal_rb = ExtResource("5_qae73")
+pal_rbg = ExtResource("6_7onfg")
+
+[node name="Room" type="Node2D" parent="."]
+use_parent_material = true
+
+[node name="StartRoom" parent="Room" instance=ExtResource("8_nx52g")]
+
+[node name="Entities" type="Node2D" parent="."]
+use_parent_material = true
+
+[node name="Player" parent="Entities" instance=ExtResource("9_2xsb4")]
+use_parent_material = true
+position = Vector2(-144, -96)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_a8d3h")
+autoplay = true
