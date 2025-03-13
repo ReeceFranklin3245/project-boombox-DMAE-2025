@@ -1,0 +1,125 @@
+.landing-page {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.landing-page .page-wrapper {
+  width: 1967px;
+  height: 1207px;
+}
+
+.landing-page .page {
+  position: relative;
+  width: 1950px;
+  height: 1103px;
+  top: 123px;
+  left: 8px;
+}
+
+.landing-page .home {
+  position: relative;
+  height: 1103px;
+  background-color: #171c54;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #383838;
+}
+
+.landing-page .frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 90px;
+  position: absolute;
+  top: 38px;
+  left: 1339px;
+}
+
+.landing-page .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Jersey 20", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.landing-page .screenshot {
+  position: absolute;
+  width: 51px;
+  height: 60px;
+  top: 18px;
+  left: 30px;
+  object-fit: cover;
+}
+
+.landing-page .img {
+  position: absolute;
+  width: 1254px;
+  height: 706px;
+  top: 130px;
+  left: 348px;
+  object-fit: cover;
+}
+
+.landing-page .rectangle {
+  position: absolute;
+  width: 1254px;
+  height: 224px;
+  top: 849px;
+  left: 348px;
+  background-color: #5c5c5c;
+  border-radius: 13px;
+}
+
+.landing-page .overlap {
+  width: 18px;
+  height: 224px;
+  top: 849px;
+  left: 1608px;
+  border-radius: 15px;
+  position: absolute;
+  background-color: #d9d9d9;
+}
+
+.landing-page .div {
+  position: relative;
+  height: 80px;
+  top: 9px;
+  background-color: #5c5c5c;
+  border-radius: 15px;
+}
+
+.landing-page .overlap-group {
+  width: 469px;
+  height: 40px;
+  top: 38px;
+  left: 741px;
+  border-radius: 45px;
+  position: absolute;
+  background-color: #d9d9d9;
+}
+
+.landing-page .search {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 9px;
+  left: 6px;
+}
+
+.landing-page .rectangle-2 {
+  position: absolute;
+  width: 1950px;
+  height: 1px;
+  top: 87px;
+  left: 0;
+  background-color: #d9d9d9;
+}
