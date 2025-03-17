@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://nex6t6wh4luk"]
 
 [ext_resource type="Texture2D" uid="uid://q763atgtpoa3" path="res://assets/testtile.png" id="1_5rtgq"]
-[ext_resource type="Material" uid="uid://nhde4wf0sxoy" path="res://assets/lvlShader.tres" id="2_trd0o"]
+[ext_resource type="Material" uid="uid://nhde4wf0sxoy" path="res://assets/layer1.tres" id="2_trd0o"]
 [ext_resource type="PackedScene" uid="uid://cvs5thrxbok4y" path="res://scenes/load_zone.tscn" id="3_n50h6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yuqek"]

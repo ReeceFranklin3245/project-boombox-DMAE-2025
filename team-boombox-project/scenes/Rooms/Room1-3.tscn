@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://c0yabtdrfgni6"]
 
 [ext_resource type="Texture2D" uid="uid://3wj3aju73tw5" path="res://assets/TrashBackGround.png" id="1_fsqwb"]
-[ext_resource type="Material" uid="uid://nhde4wf0sxoy" path="res://assets/lvlShader.tres" id="1_g043e"]
+[ext_resource type="Material" uid="uid://nhde4wf0sxoy" path="res://assets/layer1.tres" id="1_g043e"]
 [ext_resource type="Texture2D" uid="uid://q763atgtpoa3" path="res://assets/testtile.png" id="2_whpme"]
 [ext_resource type="PackedScene" uid="uid://cvs5thrxbok4y" path="res://scenes/load_zone.tscn" id="3_xls82"]
 [ext_resource type="PackedScene" uid="uid://dtnlbfe2d0v7c" path="res://scenes/gear.tscn" id="4_g0y6c"]
@@ -48,6 +48,7 @@ sources/0 = SubResource("TileSetAtlasSource_yuqek")
 use_parent_material = true
 
 [node name="TrashBackGround" type="Sprite2D" parent="."]
+visible = false
 material = ExtResource("1_g043e")
 position = Vector2(137, -207)
 scale = Vector2(0.2719, 0.381134)

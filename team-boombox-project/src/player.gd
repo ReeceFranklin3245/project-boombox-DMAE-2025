@@ -90,9 +90,7 @@ func _on_jump_buffer_timer_timeout() -> void:
 func _on_jump_timer_timeout() -> void: ## Used for variable jump height
 	if !Input.is_action_pressed("Action1") && velocity.y < -JUMP/3:
 		velocity.y = -(JUMP/3)
-		print("low jump")
-	else:
-		print("high jump")
+
 
 
 func anim() -> void:

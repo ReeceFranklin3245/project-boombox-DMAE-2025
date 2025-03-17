@@ -1,17 +1,11 @@
-[gd_resource type="AudioStreamSynchronized" load_steps=5 format=3 uid="uid://bodvx63m2ji1y"]
+[gd_resource type="AudioStreamSynchronized" load_steps=2 format=3 uid="uid://bodvx63m2ji1y"]
 
-[ext_resource type="AudioStream" uid="uid://dkp45y1y158yx" path="res://assets/music/boombox-bassline.wav" id="1_lj8j3"]
 [ext_resource type="AudioStream" uid="uid://cckyr2vesa8l0" path="res://assets/music/boombox-beat1(normaltime).wav" id="2_i7w38"]
-[ext_resource type="AudioStream" uid="uid://lmhni6mnew6a" path="res://assets/music/boombox-chords1.wav" id="3_mps8n"]
-[ext_resource type="AudioStream" uid="uid://bhpyau3ecw46s" path="res://assets/music/boombox-melody1.wav" id="4_bnk31"]
 
 [resource]
 stream_count = 4
-stream_0/stream = ExtResource("1_lj8j3")
+stream_0/stream = ExtResource("2_i7w38")
 stream_0/volume = 0.0
-stream_1/stream = ExtResource("2_i7w38")
-stream_1/volume = -60.0
-stream_2/stream = ExtResource("3_mps8n")
-stream_2/volume = -60.0
-stream_3/stream = ExtResource("4_bnk31")
-stream_3/volume = -60.0
+stream_1/volume = 0.0
+stream_2/volume = 0.0
+stream_3/volume = 0.0
