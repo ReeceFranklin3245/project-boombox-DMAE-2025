@@ -1,125 +1,144 @@
-.landing-page {
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+/* Reset margins, padding, and set box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.landing-page .page-wrapper {
-  width: 1967px;
-  height: 1207px;
-}
-
-.landing-page .page {
-  position: relative;
-  width: 1950px;
-  height: 1103px;
-  top: 123px;
-  left: 8px;
-}
-
-.landing-page .home {
-  position: relative;
-  height: 1103px;
+/* Body: use a flexible column layout and fill the viewport */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   background-color: #171c54;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #383838;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.landing-page .frame {
-  display: inline-flex;
+/* Header styling */
+header {
+  background-color: #1e2340;
+  padding: 10px 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 90px;
-  position: absolute;
-  top: 38px;
-  left: 1339px;
 }
 
-.landing-page .text-wrapper {
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Navigation styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Game Section */
+.game-section {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.game-window {
   position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Jersey 20", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+  background: #000;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  height: 600px; /* Adjust height as needed */
+  overflow: hidden;
 }
 
-.landing-page .screenshot {
-  position: absolute;
-  width: 51px;
-  height: 60px;
-  top: 18px;
-  left: 30px;
-  object-fit: cover;
+/* Ensure the iframe fills its container */
+.game-window iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-.landing-page .img {
-  position: absolute;
-  width: 1254px;
-  height: 706px;
-  top: 130px;
-  left: 348px;
-  object-fit: cover;
+/* Chat Section */
+.chat-section {
+  width: 100%;
+  max-width: 1200px;
 }
 
-.landing-page .rectangle {
-  position: absolute;
-  width: 1254px;
-  height: 224px;
-  top: 849px;
-  left: 348px;
+.chat-box {
   background-color: #5c5c5c;
   border-radius: 13px;
-}
-
-.landing-page .overlap {
-  width: 18px;
-  height: 224px;
-  top: 849px;
-  left: 1608px;
-  border-radius: 15px;
-  position: absolute;
-  background-color: #d9d9d9;
-}
-
-.landing-page .div {
+  padding: 20px;
+  min-height: 224px; /* Visual size for the chat box */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  height: 80px;
-  top: 9px;
-  background-color: #5c5c5c;
-  border-radius: 15px;
+  overflow: hidden;
 }
 
-.landing-page .overlap-group {
-  width: 469px;
-  height: 40px;
-  top: 38px;
-  left: 741px;
-  border-radius: 45px;
-  position: absolute;
-  background-color: #d9d9d9;
+/* Chat message animation */
+.chat-message {
+  font-size: 24px;
+  text-align: center;
+  opacity: 0;
+  animation: chatFadeIn 1s ease-out forwards;
 }
 
-.landing-page .search {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 9px;
-  left: 6px;
+/* Keyframes for fade-in & slide up effect */
+@keyframes chatFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.landing-page .rectangle-2 {
-  position: absolute;
-  width: 1950px;
-  height: 1px;
-  top: 87px;
-  left: 0;
-  background-color: #d9d9d9;
+/* Keyframes for fade-out */
+@keyframes chatFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* When fade-out is triggered, use the fade-out animation */
+.chat-message.fade-out {
+  animation: chatFadeOut 1s ease-out forwards;
+}
+
+/* Footer */
+footer {
+  background-color: #1e2340;
+  text-align: center;
+  padding: 10px 20px;
 }

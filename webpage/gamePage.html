@@ -2,30 +2,50 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Page</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="landing-page">
-      <div class="page-wrapper">
-        <div class="page">
-          <div class="home">
-            <div class="frame">
-              <div class="text-wrapper">HOME</div>
-              <div class="text-wrapper">GAMES</div>
-              <div class="text-wrapper">CONTACT US</div>
-            </div>
-            <img class="screenshot" src="media/cornerLogo.png" />
-            <img class="img" src="media/gamepic.png" />
-            <div class="rectangle"></div>
-            <div class="overlap"><div class="div"></div></div>
-            <div class="overlap-group">
-              <img class="search" src="media/searchIcon.svg" />
-            </div>
-            <div class="rectangle-2"></div>
-          </div>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="media/cornerLogo.png" alt="Logo" />
         </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">GAMES</a></li>
+            <li><a href="#">ABOUT</a></li>
+          </ul>
+        </nav>
       </div>
-    </div>
+    </header>
+
+    <main>
+      <section class="game-section">
+        <div class="game-window">
+          <!-- Embed your exported Godot game -->
+          <iframe
+            src="game_export.html"
+            title="Godot Game"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="chat-section">
+        <div class="chat-box">
+          <!-- The chat box will be dynamically updated via JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Game Website</p>
+    </footer>
+
+    <!-- Include the chat controller script -->
+    <script src="chat.js"></script>
   </body>
 </html>
