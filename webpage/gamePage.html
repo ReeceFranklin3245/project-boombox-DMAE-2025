@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <title>$GODOT_PROJECT_NAME</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Page</title>
+    <!-- Optional extra head include, set in export options -->
+    $GODOT_HEAD_INCLUDE
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,18 +27,14 @@
     <main>
       <section class="game-section">
         <div class="game-window">
-          <!-- Embed your exported Godot game -->
-          <iframe
-            src="game_export.html"
-            title="Godot Game"
-            allowfullscreen
-          ></iframe>
+          <!-- The Godot engine will render the game into this canvas -->
+          <canvas id="canvas"></canvas>
         </div>
       </section>
 
       <section class="chat-section">
         <div class="chat-box">
-          <!-- The chat box will be dynamically updated via JavaScript -->
+          <!-- Chat messages will be dynamically injected by chat.js -->
         </div>
       </section>
     </main>
@@ -45,6 +43,32 @@
       <p>&copy; 2025 Game Website</p>
     </footer>
 
+    <!-- Load the Godot engine script from the external folder "webgame" -->
+    <script src="webgame/Webgame.js"></script>
+    <script>
+      // Provide a custom configuration for the Godot engine.
+      // Adjust or add properties as needed.
+      // var config = {
+      //   canvasResizePolicy: 0,
+      //   unloadAfterInit: false,
+      //   // Optionally, add properties like main_pack if needed.
+      // };
+
+      // Create a new Engine instance with the configuration.
+      var engine = new Engine($GODOT_CONFIG);
+
+      // Initialize the engine with the base path where your game files are located.
+      // This base path ("webgame/") tells the engine where to load additional resources (.pck, wasm, etc.)
+      engine
+        .init("webgame/")
+        .then(function () {
+          // Once initialization is complete, start the game.
+          engine.startGame();
+        })
+        .catch(function (err) {
+          console.error("Error starting game:", err);
+        });
+    </script>
     <!-- Include the chat controller script -->
     <script src="chat.js"></script>
   </body>

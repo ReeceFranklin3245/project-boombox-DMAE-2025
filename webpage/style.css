@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Body: use a flexible column layout and fill the viewport */
+/* Body: flexible column layout that fills the viewport */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -73,11 +73,11 @@ main {
   overflow: hidden;
 }
 
-/* Ensure the iframe fills its container */
-.game-window iframe {
+/* Ensure the canvas fills its container */
+.game-window canvas {
   width: 100%;
   height: 100%;
-  border: none;
+  display: block;
 }
 
 /* Chat Section */
@@ -107,7 +107,7 @@ main {
   animation: chatFadeIn 1s ease-out forwards;
 }
 
-/* Keyframes for fade-in & slide up effect */
+/* Keyframes for fade-in & slide-up effect */
 @keyframes chatFadeIn {
   0% {
     opacity: 0;
@@ -131,12 +131,12 @@ main {
   }
 }
 
-/* When fade-out is triggered, use the fade-out animation */
+/* Fade-out trigger */
 .chat-message.fade-out {
   animation: chatFadeOut 1s ease-out forwards;
 }
 
-/* Footer */
+/* Footer styling */
 footer {
   background-color: #1e2340;
   text-align: center;
